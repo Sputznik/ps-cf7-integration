@@ -16,7 +16,7 @@ function add_custom_mail_tag( $custom_mail_tags, $form_id ) {
 
 add_filter("wpcf7_special_mail_tags", function( $output,  $name,  $html ) {
     if ( $name === "_fbclid" ) {
-      return isset( $_GET['fbclid'] ) ? $_GET['fbclid'] : "";
+      return isset( $_GET['fbclid'] ) ? $_GET['fbclid'] : "Default";
     }
   	return $output;
 }, 10, 3 );
